@@ -1,0 +1,256 @@
+#app-header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  transition: 0.3s;
+}
+#app-header #app-header-nav {
+  justify-self: center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+}
+#app-header #app-header-nav .nav-link {
+  color: #8f805c;
+  font-size: 32px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+#app-header #app-header-nav .nav-link:hover {
+  color: black;
+  background: #8f805c;
+}
+@media (max-width: 640px) {
+  #app-header #app-header-nav .nav-link {
+    font-size: 24px;
+  }
+}
+#app-header #acc {
+  justify-self: right;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+}
+#app-header #acc .acc-link {
+  color: white;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  font-size: 20px;
+  transition: 0.2s;
+}
+#app-header #acc .acc-link:hover {
+  border-bottom: 2px solid white;
+}
+@media (max-width: 640px) {
+  #app-header #acc .acc-link {
+    font-size: 16px;
+  }
+}
+#app-header .vertical-line {
+  height: auto;
+  width: 3px;
+  background: white;
+}
+@media (max-width: 1280px) {
+  #app-header #app-header-nav {
+    gap: 4px;
+  }
+}
+@media (max-width: 1000px) {
+  #app-header {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  #app-header #acc {
+    justify-self: center;
+    grid-row: 1;
+  }
+}
+
+.app-header-scroll {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #8f805c;
+  box-shadow: 0px 0px 5px #8f805c;
+}
+.app-header-scroll #app-header-nav .nav-link {
+  font-size: 28px !important;
+}
+@media (max-width: 640px) {
+  .app-header-scroll #app-header-nav .nav-link {
+    font-size: 20px !important;
+  }
+  #privacy{
+    padding-top: 6em;
+  }
+}
+
+#home {
+  gap: 128px;
+  height: 100vh;
+  background: url("../img/paralax.webp") rgba(0, 0, 0, 0.3);
+}
+
+#privacy{
+  background: url("../img/paralax.webp") rgba(0, 0, 0, 0.3);
+}
+
+#home #h1-title,#privacy #h1-title {
+  font-size: 64px;
+}
+
+#goons-radar-prev {
+  gap: 64px;
+}
+#goons-radar-prev .goons-radar-infoset {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 8px;
+}
+
+.goons-radar-infoset {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 8px;
+}
+
+#goons-about {
+  background: url("../img/paralax4.webp") rgba(0, 0, 0, 0.3);
+}
+#goons-about #goons-about-wrap {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 16px;
+}
+#goons-about #goons-about-wrap .goons-about-boss {
+  display: none;
+  grid-auto-flow: row;
+  gap: 4px;
+}
+
+.goon-active {
+  background: #569420 !important;
+}
+
+.boss-info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  max-width: 50vw !important;
+}
+.boss-info img {
+  width: 384px;
+  border-radius: 8px;
+}
+.boss-info .boss-info-text {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: start;
+  gap: 8px;
+}
+.boss-info .boss-info-text .boss-info-text-hp {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-content: start;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+
+#goons-spawns #spawn-info-wrap .spawn-info-map {
+  display: none;
+  grid-auto-flow: row;
+  gap: 4px;
+}
+
+.spawn-info-map-details {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  max-width: 50vw !important;
+}
+.spawn-info-map-details img {
+  width: 384px;
+  border-radius: 8px;
+}
+.spawn-info-map-details .spawn-info-map-text {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: start;
+  gap: 8px;
+}
+
+#goon-toggle, #spawn-toggle {
+  display: grid;
+  grid-auto-flow: column;
+}
+#goon-toggle p, #spawn-toggle p {
+  padding: 8px 12px;
+  background: #6eb430;
+  cursor: pointer !important;
+}
+#goon-toggle p:hover, #spawn-toggle p:hover {
+  background: #569420;
+}
+#goon-toggle p:first-child, #spawn-toggle p:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#goon-toggle p:last-child, #spawn-toggle p:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media (max-width: 480px) {
+  #goon-toggle p, #spawn-toggle p {
+    font-size: 18px !important;
+  }
+}
+
+.paralax {
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-blend-mode: multiply !important;
+}
+@media (max-width: 720px) {
+  .paralax {
+    background-attachment: scroll !important;
+  }
+}
+
+.info_img {
+  border: 2px solid #8f805c !important;
+}
+
+@media (max-width: 1280px) {
+  .boss-info, .spawn-info-map-details {
+    max-width: 75vw !important;
+  }
+}
+@media (max-width: 960px) {
+  .boss-info, .spawn-info-map-details {
+    max-width: 95vw !important;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+@media (max-width: 960px) and (max-width: 480px) {
+  .boss-info img, .spawn-info-map-details img {
+    width: 256px;
+  }
+}
+#report-goons {
+  color: white;
+  background: darkred;
+  font-size: 32px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+#report-goons:hover {
+  background: black;
+  color: darkred;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "benderLight";
+  src: url("../fonts/bender.light.otf");
+}
+@font-face {
+  font-family: "benderRegular";
+  src: url("../fonts/bender.regular.otf");
+}
+@font-face {
+  font-family: "benderBold";
+  src: url("../fonts/bender.regular.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "benderBold";
+  src: url("../fonts/bender.regular.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "benderBlack";
+  src: url("../fonts/bender.bold.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "benderBlack";
+  src: url("../fonts/bender.bold-italic.otf");
+  font-style: italic;
+}
+.nav-link {
+  font-family: "benderRegular", sans-serif;
+}
+
+h1 {
+  font-family: "benderBlack", Arial;
+  font-size: 32px;
+  color: #6eb430;
+}
+
+h2 {
+  font-family: "benderBold", Arial;
+  font-size: 28px;
+  color: #6eb430;
+}
+
+h3 {
+  font-family: "benderBold", Arial;
+  font-size: 24px;
+  color: white;
+}
+
+p {
+  font-family: "benderRegular", sans-serif;
+  font-size: 24px;
+  color: white;
+  text-align: justify;
+}
+
+a {
+  font-family: "benderBlack", Arial;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3, p {
+    font-size: 20px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: start;
+  justify-items: center;
+  min-height: 100vh;
+}
+body #app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+body section {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  padding: 64px 32px;
+  width: 100%;
+  gap: 16px;
+  background: #000000;
+}
+body section:nth-child(odd) {
+  background: #1a1a1a;
+}
+@media (max-width: 500px) {
+  body section {
+    padding: 32px 16px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6eb430;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #569420;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #8f805c;
+}
+
+.no-select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.disabled-link {
+  color: grey;
+  font-size: 16px;
+}
+
+.alt-font {
+  color: #8f805c;
+}
+
+b {
+  color: #8f805c;
+  font-weight: 100;
+}
+
+#imagineThisIsAnLogo {
+  width: 384px;
+  height: 256px;
+  background: #6eb430;
+}/*# sourceMappingURL=global.css.map */

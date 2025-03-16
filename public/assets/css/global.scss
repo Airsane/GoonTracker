@@ -1,0 +1,190 @@
+// VARIABLES
+$mainColor: #6eb430;
+$mainHover: #569420;
+// $altColor: orange;
+$altColor: #8f805c;
+$background: #000000;
+$backgroundAlt: #1a1a1a;
+
+// FONTS
+@font-face {
+    font-family: "benderLight";
+    src: url("../fonts/bender.light.otf");
+}
+@font-face {
+    font-family: "benderRegular";
+    src: url("../fonts/bender.regular.otf");
+}
+@font-face {
+    font-family: "benderBold";
+    // src: url("../fonts/bender.bold.otf");
+    src: url("../fonts/bender.regular.otf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "benderBold";
+    // src: url("../fonts/bender.bold-italic.otf");
+    src: url("../fonts/bender.regular.otf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "benderBlack";
+    // src: url("../fonts/bender.black.otf");
+    src: url("../fonts/bender.bold.otf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "benderBlack";
+    // src: url("../fonts/bender.black-italic.otf");
+    src: url("../fonts/bender.bold-italic.otf");
+    font-style: italic;
+}
+
+// FONTS USAGE
+    // font-family: 'benderLight', sans-serif;
+    // font-family: 'benderRegular', sans-serif;
+    // font-family: 'benderBold', Arial;
+    // font-family: 'benderBlack', Arial;
+
+    .nav-link {
+        font-family: 'benderRegular', sans-serif;;
+    }
+
+h1 {
+    font-family: 'benderBlack', Arial;
+    font-size: 32px;
+    color: $mainColor;
+}
+
+h2 {
+    font-family: 'benderBold', Arial;
+    font-size: 28px;
+    color: $mainColor;
+}
+
+h3 {
+    font-family: 'benderBold', Arial;
+    font-size: 24px;
+    color: white;
+}
+
+p {
+    font-family: 'benderRegular', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-align: justify;
+
+}
+
+a {
+    font-family: 'benderBlack', Arial;
+    text-decoration: none;
+}
+
+h1, h2, h3 {text-align: center;}
+
+@media(max-width: 560px) {
+    h1 {font-size: 28px;}
+    h2 {font-size: 24px;}
+    h3, p {font-size: 20px;}
+}
+
+// SITEWIDE
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// LAYOUT
+
+body {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: start;
+    justify-items: center;
+
+    min-height: 100vh;
+
+    #app-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    section {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+
+        padding: 64px 32px;
+        width: 100%;
+        gap: 16px;
+
+        background: $background;
+        &:nth-child(odd) {
+            background: $backgroundAlt;
+        }
+
+        @media(max-width: 500px) {
+            padding: 32px 16px;
+        }
+    }
+}
+
+// ScrollBar
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $mainColor;
+    &:hover {
+        background: $mainHover;
+    }
+    &:active {
+        background: #8f805c;
+    }
+}
+
+// No-select
+.no-select {user-select: none;}
+
+// Text-align
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+// Disabled
+.disabled-link {
+    color: grey;
+    font-size: 16px;
+}
+
+// I dont know...
+
+.alt-font {
+    // color: orange;
+    color: $altColor;
+}
+
+b {
+    // color: orange;
+    color: $altColor;
+    font-weight: 100;
+}
+
+#imagineThisIsAnLogo {
+    width: 384px;
+    height: 256px;
+    background: #6eb430;
+}

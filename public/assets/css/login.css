@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "benderLight";
+  src: url("../fonts/bender.light.otf");
+}
+@font-face {
+  font-family: "benderRegular";
+  src: url("../fonts/bender.regular.otf");
+}
+@font-face {
+  font-family: "benderBold";
+  src: url("../fonts/bender.regular.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "benderBold";
+  src: url("../fonts/bender.regular.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "benderBlack";
+  src: url("../fonts/bender.bold.otf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "benderBlack";
+  src: url("../fonts/bender.bold-italic.otf");
+  font-style: italic;
+}
+form {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 32px;
+  padding: 64px 32px;
+  border-radius: 8px;
+}
+form .g-recaptcha {
+  justify-self: center;
+}
+form input, form button, form select {
+  font-family: "benderRegular", sans-serif;
+  font-size: 32px;
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+form input {
+  border-bottom: 3px solid #569420;
+  background: none;
+  color: white;
+}
+form input::-moz-placeholder {
+  color: darkgray;
+}
+form input::placeholder {
+  color: darkgray;
+}
+form input:focus {
+  border-bottom: 3px solid #6eb430;
+}
+form input.button {
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #6eb430;
+  padding: 4px 16px;
+}
+form input.button:hover {
+  background: #569420;
+}
+form select {
+  background: none;
+  color: white;
+  border-bottom: 3px solid #569420;
+}
+form select:focus {
+  border-bottom: 3px solid #6eb430;
+}
+form select option {
+  color: white;
+  background: black;
+}
+
+.reg-link {
+  font-family: "benderRegular", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+.reg-link:hover {
+  text-decoration: underline;
+}
+
+tbody {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 32px;
+  justify-content: center;
+  justify-items: center;
+}
+
+label {
+  display: none !important;
+}
+
+.error {
+  background: red;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+.error li {
+  color: white;
+  font-family: "benderBold", Arial;
+  text-align: center;
+}
+
+span.error {
+  width: 100%;
+  margin-top: 8px;
+  text-align: center;
+}
+
+td {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 8px;
+}
+
+li::marker {
+  display: none !important;
+  opacity: 0 !important;
+  color: rgba(0, 0, 0, 0) !important;
+}/*# sourceMappingURL=login.css.map */

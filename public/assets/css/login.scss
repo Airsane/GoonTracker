@@ -1,0 +1,110 @@
+// VARIABLES
+$mainColor: #6eb430;
+$mainHover: #569420;
+// $altColor: orange;
+$altColor: #8f805c;
+$background: #000000;
+$backgroundAlt: #1a1a1a;
+
+// FONTS
+@font-face {
+    font-family: "benderLight";
+    src: url("../fonts/bender.light.otf");
+}
+@font-face {
+    font-family: "benderRegular";
+    src: url("../fonts/bender.regular.otf");
+}
+@font-face {
+    font-family: "benderBold";
+    // src: url("../fonts/bender.bold.otf");
+    src: url("../fonts/bender.regular.otf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "benderBold";
+    // src: url("../fonts/bender.bold-italic.otf");
+    src: url("../fonts/bender.regular.otf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "benderBlack";
+    // src: url("../fonts/bender.black.otf");
+    src: url("../fonts/bender.bold.otf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "benderBlack";
+    // src: url("../fonts/bender.black-italic.otf");
+    src: url("../fonts/bender.bold-italic.otf");
+    font-style: italic;
+}
+
+// FONTS USAGE
+    // font-family: 'benderLight', sans-serif;
+    // font-family: 'benderRegular', sans-serif;
+    // font-family: 'benderBold', Arial;
+    // font-family: 'benderBlack', Arial;
+
+form {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 32px;
+    padding: 64px 32px;
+    border-radius: 8px;
+
+    .g-recaptcha {justify-self: center;}
+
+    input, button, select {
+        font-family: 'benderRegular', sans-serif;
+        font-size: 32px;
+        outline: none;
+        border: none;
+        padding: 4px;
+    }
+
+    input {
+        border-bottom: 3px solid $mainHover;
+        background: none;
+        color: white;
+        &::placeholder {color: darkgray;}
+        &:focus {border-bottom: 3px solid $mainColor;}
+    }
+    
+    input.button {
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .2s;
+        background: $mainColor;
+        padding: 4px 16px;
+        &:hover {background: $mainHover;}
+    }
+
+    // REPORT SELECT
+    select {
+        background: none;
+        color: white;
+        border-bottom: 3px solid $mainHover;
+        &:focus {border-bottom: 3px solid $mainColor;}
+
+        option {
+            color: white;
+            background: black;
+        }
+    }
+}
+
+.reg-link {
+    font-family: 'benderRegular', sans-serif;
+    color: white;
+    font-size: 20px;
+    &:hover {text-decoration: underline;}
+}
+
+tbody {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 32px;
+    justify-content: center;
+    justify-items: center;
+}
