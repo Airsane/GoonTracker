@@ -65,15 +65,15 @@ jobs:
 
       - name: Create ZIP package
         run: |
-          zip -r laravel-app-${{ github.ref_name }}.zip . -x ".git/*" "node_modules/*" "tests/*" ".github/*"
+          zip -r goontracker-${{ github.ref_name }}.zip . -x ".git/*" "node_modules/*" "tests/*" ".github/*"
 
       - name: Upload ZIP as an artifact
         uses: actions/upload-artifact@v4
         with:
-          name: laravel-app-${{ github.ref_name }}
-          path: laravel-app-${{ github.ref_name }}.zip
+          name: goontracker-${{ github.ref_name }}
+          path: goontracker-${{ github.ref_name }}.zip
 
       - name: Release and attach ZIP
         uses: softprops/action-gh-release@v2
         with:
-          files: laravel-app-${{ github.ref_name }}.zip
+          files: goontracker-${{ github.ref_name }}.zip
