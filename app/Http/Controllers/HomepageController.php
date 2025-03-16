@@ -27,7 +27,14 @@ class HomepageController extends Controller
 			$newReport->location_id = $this->locations->where('name', $data['location'])->first()->id;
 			$newReport->reported_when = Carbon::make($data['reported']);
 			if(!$latestReport || $latestReport->reported_when->diffInMinutes($newReport->reported_when) > 5){
-                $newReport->user_id = User::first()->id;
+                $user = User::first();
+                if(!$user){
+                    $user = new User();
+                    $user->login = 'anonymous';
+                    $user->discord_id = 'anonymous';
+                    $user->save();
+                }
+                $newReport->user_id = $user->id;
 				$newReport->save();
 			}
 		}
