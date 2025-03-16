@@ -2,11 +2,11 @@ name: Laravel
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     tags:
       - 'v*'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # Add permissions configuration
 permissions:
